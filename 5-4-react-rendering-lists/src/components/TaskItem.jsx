@@ -9,13 +9,9 @@ export default function TaskItem({ task, onToggle, onDelete }) {
             Also make it reflect task.isDone using checked={task.isDone} */}
         <input type="checkbox" />
 
-        {/* TODO (TASK 3): Show <DueBadge /> ONLY when task is NOT done (&&)
-            Example:
-              {!task.isDone && <DueBadge dueDate={task.dueDate} />} */}
+       <span className="title">{task.title}</span>
 
-        {/* TODO (TASK 2): Display the task title
-            Example:
-              <span className="title">{task.title}</span> */}
+        {!task.isDone && <DueBadge dueDate={task.dueDate} />}
       </label>
 
       {/* TODO (TASK 4): Delete button calls onDelete(task.id) on click */}
